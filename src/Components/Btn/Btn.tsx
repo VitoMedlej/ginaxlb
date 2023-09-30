@@ -8,17 +8,17 @@ let style1 = {
   color: 'black',
   background: 'white',
   border:'1px solid',
-  borderRadius: '30px', 
+  borderRadius: '4px', 
   transition: 'background 0.3s ease, transform 0.2s ease',
 
   ':hover': {
-      background: '#ff8e00',
+      background: '#3d8af7',
       transform: 'scale(1.05)',
   },
   display: 'flex',
-  padding: '9px 40px',
+  padding: '9px 45px',
   fontWeight: '400',
-  fontSize: '12px',
+  fontSize: '16px',
   cursor: 'pointer',
   outline: 'none',
 }

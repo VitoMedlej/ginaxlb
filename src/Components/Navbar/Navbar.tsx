@@ -11,24 +11,25 @@ import { useEffect, useState} from 'react';
 // import { CartContext, DrawerContext } from '../../../pages/_app'; import
 import SearchModal from './SearchModal';
 import Link from 'next/link';
-import {Badge, Divider, Typography} from '@mui/material';
+import {Badge, Container, Divider, Typography} from '@mui/material';
 // import { loadState } from '../../Utils/LocalstorageFn';
 import {useRouter} from 'next/navigation';
 // import {AiOutlinePhone, AiOutlineSearch, AiOutlineMenu} from 'react-icons/ai'
-import {CiShoppingCart} from 'react-icons/ci'
+import {AiOutlineFieldTime} from 'react-icons/ai'
+import {TbDeviceMobileMessage} from 'react-icons/tb'
+import {FaInstagram,FaWhatsapp,FaFacebookF} from 'react-icons/fa'
 
 import NavButtom from './NavButtom';
 import { useCartContext, useDrawerContext } from '@/context/Contexts';
-import Btn from '../Btn/Btn';
+// import Btn from '../Btn/Btn';
 
 
 
 export const categories = [
-    "New Arrivals",
-    "Cats",
-    "Dogs",
-    "Birds",
-    "Offers",
+   'Home',
+   'Services',
+   'About',
+   'Contact',
 ]
 export default function Navbar() {
     const {open, setOpen} = useDrawerContext();
@@ -80,6 +81,47 @@ export default function Navbar() {
                 width:'100%',
             margin: '0 auto',
         }}>
+            <Box className=' ' sx={{background:'#232323',py:1}}>
+                        <Container className='auto flex row justify-evenly' sx={{maxWidth:'lg',}}>
+
+                        <Box className='flex items-center center'>
+                                <AiOutlineFieldTime/>
+                                {' '}
+                                <Typography sx={{fontSize:{xs:'.65em',sm:'.9em'}}}>
+                            Working hours:Mon - Sat 8.00 - 18.00
+                            </Typography>
+                        </Box>
+                        <Box sx={{ml:2}} className='flex items-center center'>
+                                <TbDeviceMobileMessage/>
+                                {' '}
+                                <Typography sx={{fontSize:{xs:'.65em',sm:'.9em'}}}>
+                            Call Us:(+1) 555 234-8765
+                            </Typography>
+                        </Box>
+                        <Box sx={{flex:1,display:{xs:'none',sm:'flex'},color:'white',justifyContent:'end'}} className=' items-center '>
+                        <Box  className='flex items-center center' sx={{mx:1,py:.5,px:.5,height:'20px',width:'20px',border:'1px solid white',borderRadius:'50%'}}>
+
+                            <a className='flex items-center center' href='/'>
+                            <FaInstagram color='white'/>
+                            </a>
+                        </Box>
+                        <Box  className='flex items-center center' sx={{mx:1,py:.5,px:.5,height:'20px',width:'20px',border:'1px solid white',borderRadius:'50%'}}>
+
+                            <a className='flex items-center center' href='/'>
+                            <FaWhatsapp color='white'/>
+                            </a>
+                        </Box>
+                        <Box  className='flex items-center center' sx={{mx:1,py:.5,px:.5,height:'20px',width:'20px',border:'1px solid white',borderRadius:'50%'}}>
+
+                            <a className='flex items-center center' href='/'>
+                            <FaFacebookF color='white'/>
+                            </a>
+                        </Box>
+                            
+                            
+                        </Box>
+                        </Container>
+            </Box>
                
             <Toolbar
      id='navy3'
@@ -101,11 +143,12 @@ export default function Navbar() {
     mx: {
         sm: '1em'
     },
+    height:'80px',
     width:{xs:'100px',sm: '110px'}
 }}>
     <img
         className='img'
-        src={`https://ucarecdn.com/13297c6a-72ec-4555-8372-965e8531d16f/372688426_120263737816524_8073115919353653137_n.jpg`}
+        src={`https://ucarecdn.com/d345b1ff-8098-485e-bd36-54d5baade053/renderimage.png`}
         alt="design compas  logo"/>
 </Box>
 </Link>

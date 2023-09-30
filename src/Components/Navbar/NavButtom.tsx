@@ -6,46 +6,9 @@ import React from 'react'
 import { categories } from './Navbar'
 import MenuHover from './MenuHover'
 
-export const catsSubcategories = [
-    "Food",
-    "Treats",
-    "Toys",
-    "Collars",
-    "Leashes",
-    "Apparel",
-    "Grooming",
-    "Brushes",
-    "Litters",
-    "Hygiene",
-    "Health",
-    "Wellness",
-    "Medication",
-    "Fleas",
-    "Ticks"
-];
 
-export const dogsSubcategories = [
-    "Food",
-    "Treats",
-    "Toys",
-    "Collars",
-    "Leashes",
-    "Apparel",
-    "Grooming",
-    "Brushes",
-    "Hygiene",
-    "Health",
-    "Wellness",
-    "Medication",
-    "Fleas",
-    "Ticks"
-];
 
-export const offersSubcategories = [
-  	"Special Deals",
-  	"Clearance Items",
-  	"Discounted Bundles"
-];
+
 
 
 
@@ -71,7 +34,7 @@ const NavButtom = () => {
 
         }}>
 {/* <Link className=' decor-none uppercase' href={`/collection/products`}>
-                    <Typography  component='p' sx={{width:'max-content',fontWeight:400,fontSize:{xs:'.7em',sm:'.85em'}}}>
+                    <Typography  component='p' sx={{width:'max-content',fontWeight:500,fontSize:{xs:'.7em',sm:'.85em'}}}>
                     Sale
                     </Typography>
                 </Link> */}
@@ -84,7 +47,7 @@ component='p' sx={{width:'max-content',
 mx:'1em',
 alignItems: 'center',
 
-fontWeight:400,fontSize:{xs:'.76em',sm:'.95em'}}}>
+fontWeight:500,fontSize:{xs:'.76em',sm:'.95em'}}}>
 Home
 </Typography>
 </Link>
@@ -97,7 +60,7 @@ component='p' sx={{width:'max-content',
 mx:'1em',
 alignItems: 'center',
 
-fontWeight:400,fontSize:{xs:'.76em',sm:'.95em'}}}>
+fontWeight:500,fontSize:{xs:'.76em',sm:'.95em'}}}>
 About
 </Typography>
 </Link>
@@ -110,7 +73,7 @@ component='p' sx={{width:'max-content',
 mx:'1em',
 alignItems: 'center',
 
-fontWeight:400,fontSize:{xs:'.76em',sm:'.95em'}}}>
+fontWeight:500,fontSize:{xs:'.76em',sm:'.95em'}}}>
 Contact
 </Typography>
 </Link>
@@ -123,7 +86,7 @@ component='p' sx={{width:'max-content',
 mx:'1em',
 alignItems: 'center',
 
-fontWeight:400,fontSize:{xs:'.76em',sm:'.95em'}}}>
+fontWeight:500,fontSize:{xs:'.76em',sm:'.95em'}}}>
 Services
 </Typography>
 </Link>

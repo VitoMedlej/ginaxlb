@@ -14,7 +14,7 @@ import Btn from './Btn/Btn';
 const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
     const [imgs,setImgs] = useState([
-        {img : `https://ucarecdn.com/4b553e20-2359-4dd7-858d-353b4bbedb80/chrisshelby.jpg`},
+        {img : `https://industrial.bold-themes.com/yellow-factory/wp-content/uploads/sites/10/2016/10/background_2.jpg`},
        
      ])
     useEffect(() => {
@@ -79,12 +79,13 @@ const Preloader3 = ({res}:{res:any}) => {
                             sx={{
                                 top:'50%',
                                 px:{xs:4,sm:5,md:6},
-                                maxWidth:'550px',
+                                maxWidth:'850px',
                                 transform:'translateY(-50%)',
                                 zIndex:123456,
                                 position:'absolute'}}>
                                 <Typography sx={{color:'white',fontSize:{xs:'2.5em',sm:'3.5em',md:'4em',lg:'4em'},fontWeight:900}}>
-                                Experience the Power of Desgin Compas
+                                Reliable Engineering
+Takes Many Forms
                                 </Typography>
                                 <Typography sx={{color:'white',fontSize:{xs:'.85em',sm:'.89em'},mt:1,maxWidth:'600px'}}>
                                 At DesignCompass, we believe that every space has a story to tell. Our passionate team of designers is dedicated to weaving unique narratives through the art of interior design

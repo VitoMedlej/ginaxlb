@@ -1,31 +1,42 @@
 "use client"
 import Link from 'next/link';
-import {Typography , Box, Divider } from '@mui/material'
+import {Box, Typography } from '@mui/material'
 import './style.css'
-import SMicons from '../SMicons/SMicons';
+import { useRouter } from 'next/navigation';
 // import SMicons from './SMicons';
 // // import Logo from '../../assets/icons/logo';
 
 
-const Footer = () => (
-  <footer className="site-footer " style={{color:'black',background:'white'}}>
-    <Divider></Divider>
-    <div className="container " style={{color:'black',background:'white'}}>
-      <div className="site-footer__top ">
-        <div className="site-footer__description">
-          <div className='logos cursor'>
+const Footer = () => 
+{
+  const router= useRouter()
+  return (
+  <Box component='footer' className="site-footer  relative bgfooter" sx={{backgroundRepeat:'no-repeat',
+ backgroundPosition: {xs:'center !important',md:'center !important'},
+  backgroundImage: {xs:"url('https://th.bing.com/th/id/R.ca5edfef6ed6212a432cf0740d26ff90?rik=pVwR27L68dpplQ&pid=ImgRaw&r=0')",sm:"url('https://th.bing.com/th/id/R.ca5edfef6ed6212a432cf0740d26ff90?rik=pVwR27L68dpplQ&pid=ImgRaw&r=0')" },
+  backgroundSize:{xs:'cover !important',md:'cover !important'}
+  
+  ,marginTop:'3em',color:'black',background:'white'}}>
+    <Box sx={{display:'flex',width:'100%',position:'absolute',height:'100%',background:'black',opacity:.7,top:0,right:0}}>
+
+    </Box>
+
+    <div className="container relative " style={{zIndex:2414,background:'transparent',color:'black'}}>
+      <div className="site-footer__top  relative">
+        <div className="site-footer__description relative">
+          <div className='logos cursor relative'>
 
             <Link href="/">
               {/* <a><h1 className="site-logo"><Logo />E-Shop</h1></a> */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675357773/logo_ghli5e.jpg */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675713948/logo_sktnut_1_jwy2hk.png */}
-            <img className='img ' src='https://ucarecdn.com/13297c6a-72ec-4555-8372-965e8531d16f/372688426_120263737816524_8073115919353653137_n.jpg' alt="DesignCompass Lebanon Logo" />
+            <img className='img ' src='https://ucarecdn.com/d345b1ff-8098-485e-bd36-54d5baade053/renderimage.png' alt="Footer Logo" />
             </Link>
           </div>
-          <Typography component='h1' sx={{ fontSize: '.95em',color:"2b2b2b" }}  className='footer-p '>
-          At DesignCompass, we believe that every space has a story to tell. Our passionate team of designers is dedicated to weaving unique narratives through the art of interior design. With an unwavering commitment to creativity and quality, we turn your vision into reality.
+          <Typography component='p' sx={{ fontWeight:700,fontSize: '1.2em' ,color:'white' }}  className='  '>
+          Join us at Solution Atelier and embark on a journey of engineering excellence. Whether you&apos;re seeking top-tier engineering services, professional training, or a community of driven individuals, we&apos;re here to guide you. With our authorized certified instructors, cutting-edge software skills enhancement, and a thriving network of 1200+ students, we&apos;re committed to shaping the future of civil engineering in Lebanon and beyond.
           </Typography>
-          <SMicons/>
+          {/* <SMicons/> */}
 
           {/* <ul className="site-footer__social-networks">
           <li><a href="https://www.facebook.com/profile.php?id=100063581229923" rel="noreferrer" target='_blank'><i className="icon-facebook"></i></a></li>
@@ -36,43 +47,55 @@ const Footer = () => (
         </ul> */}
         </div>
 
-        <div className="site-footer__links ">
+        <div className=" white site-footer__links relative ">
         {/* <div>
         <iframe style={{height:'100%',width:'100%',border:0}} frameBorder="0" src="https://www.google.com/maps/embed/v1/place?q=Beirut,+Lebanon&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
         </div> */}
-          <ul className=' ul-white'>
-            <li className='link-title'>Site links</li>
+          <ul className='white ul-white'>
+            <li className='white link-title'>
+              <Typography sx={{fontSize:'1.45em',fontWeight:600}} component='h1'>
+              Site links
+              </Typography>
+              </li>
             <li><Link  href="/">Home</Link></li>
-            <li><Link href="/collection/products">All Products</Link></li> 
-            <li><Link href="/cart">Cart</Link></li>
-            <li><Link href="/checkout">checkout</Link></li>
-            <li><Link href="https://wa.me/+9611234567">Contact Us</Link></li>
+            <li><Link href="/about-us">About Us</Link></li>
+            {/* <li><Link href="/certifications">Certifications</Link></li> */}
+            {/* <li><Link href="/recipes">Recipes</Link></li> */}
+
+            {/* <li><Link href="/cart">Cart</Link></li> */}
+            <li><Link href="/courses">Courses</Link></li>
+     
           </ul>
      
-          <ul  className='ul-white' style={{color:'black'}}>
-            <li className='link-title'>Contact</li>
-            <li><Link href="mailto:sales@thecraftroom-lb.com">contact@DesignCompass.com</Link></li>
+          <ul  className='ul-white white' style={{color:'black'}}>
+          <li className='link-title white'>
+              <Typography 
+              onClick={()=>router.push('#contact')}
+              sx={{fontSize:'1.45em',fontWeight:600}} component='h1'>
+              Contact
+              </Typography>
+              </li>
+            {/* <li><Link href="#"> Lebanon</Link></li> */}
             
             {/* <li><a href="https://www.facebook.com/profile.php?id=100076163602459/" target="_blank" rel="noreferrer" >Facebook</a></li> */}
 
-            <li><a href="https://www.instagram.com/design__compass/" target="_blank" rel="noreferrer" >@design__compass</a></li>
-            <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`} rel="noreferrer" target='_blank' >+{process.env.NEXT_PUBLIC_WA}</a></li>
-            {/* <li><a href={`http://tiktok.com/@thecraftroomlb`} rel="noreferrer" target='_blank' >TikTok</a></li> */}
+            <li><a href="https://www.instagram.com/Solution Atelier/" target="_blank" rel="noreferrer" >Solution Atelier Instagram</a></li>
+            <li><a href={'https://wa.me/78859497'} rel="noreferrer" target='_blank' >{` +961 78859497 `}</a></li>
           </ul>
         </div>
-  
       </div>
     </div>
 
-    <div className="site-footer__bottom " style={{color:'black',borderTop:"1px solid #0000001f"}}>
-      <div className="container " style={{color:'black'}}>
-        <p>Website Developed By{' '}
-          <a style={{ color: 'black' }} href={`${'https://www.onbeirut.com'}`}>OnBeirut Agency </a></p>
+    <div className="center text-center  relative " style={{background:'#232323',textAlign:'center',color:'black',borderTop:"1px solid #0000001f"}}>
+      <div className="  white " style={{background:'#232323',}}>
+        <Box sx={{py:2}}>Website Developed By{' '}
+          <a className='white' href={`${'https://www.onbeirut.com'}`}>OnBeirut Agency </a></Box>
       </div>
     </div>
-  </footer>
+  </Box>
 );
+
+}
 
 
 export default Footer
-

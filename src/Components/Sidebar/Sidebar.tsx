@@ -10,7 +10,7 @@ import {AiOutlineArrowUp} from 'react-icons/ai';
 import { DrawerContext } from '@/context/Contexts';
 import {GrFormClose} from 'react-icons/gr'
 import SMicons from '../SMicons/SMicons';
-import { catsSubcategories, dogsSubcategories, offersSubcategories } from '../Navbar/NavButtom';
+// import { catsSubcategories, dogsSubcategories, offersSubcategories } from '../Navbar/NavButtom';
 import NestedAccordion from './NestedAccordion';
 
 
